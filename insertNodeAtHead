@@ -1,0 +1,11 @@
+problem statement:https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-linked-list/problem?isFullScreen=true/ahttps://chat.openai.com/c/fc776cf0-1dc3-4823-a2b6-21f4cb9fb658
+  static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+      SinglyLinkedListNode newnode = new SinglyLinkedListNode(data);
+    if (llist == null) {
+        llist = newnode; // Update the head to point to the new node
+    } else {
+        newnode.next = llist; // Make the new node point to the current head
+        llist = newnode; // Update the head to point to the new node
+    }
+    return llist;
+    }
